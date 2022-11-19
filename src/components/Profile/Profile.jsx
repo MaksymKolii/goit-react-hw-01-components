@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import s from './Profile.module.css';
 
 export const Profile = ({
   username,
@@ -8,7 +9,8 @@ export const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div className="profile">
+    // <div className="profile">
+    <div className={s.container}>
       <div className="description">
         <img src={avatar} alt="User avatar" className="avatar" />
         <p className="name">{username}</p>
