@@ -18,9 +18,10 @@ FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      avatar: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      isOnline: PropTypes.bool.isRequired,
-    })
+      //* Можно не указывать
+      // avatar: PropTypes.string.isRequired,
+      // name: PropTypes.string.isRequired,
+      // isOnline: PropTypes.bool.isRequired,
+    }).isRequired
   ).isRequired,
 };
