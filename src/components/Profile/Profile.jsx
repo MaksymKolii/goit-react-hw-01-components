@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import s from './Profile.module.css';
+// import s from './Profile.module.css';
+import { ProfileCl, Description, Avatar, Name, Tag } from './Profile.styled';
 
 export const Profile = ({
   username,
@@ -10,13 +11,13 @@ export const Profile = ({
 }) => {
   return (
     // <div className="profile">
-    <div className={s.container}>
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
+    <ProfileCl>
+      <Description>
+        <Avatar img src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
         <p className="location">{location}</p>
-      </div>
+      </Description>
 
       <ul className="stats">
         <li>
@@ -32,7 +33,7 @@ export const Profile = ({
           <span className="quantity">{likes}</span>
         </li>
       </ul>
-    </div>
+    </ProfileCl>
   );
 };
 
