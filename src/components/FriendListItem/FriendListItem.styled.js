@@ -26,7 +26,7 @@ export const Status = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: ${({ on }) => (on ? 'green' : 'red')};
+  background-color: ${({ isOn }) => (isOn ? 'green' : 'red')};
 `;
 
 export const FriendName = styled.p`
